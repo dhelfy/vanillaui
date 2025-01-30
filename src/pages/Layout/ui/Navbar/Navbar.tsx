@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./Navbar.module.css"
 import { Searchbar } from "../Searchbar/Searchbar";
-import { CstmLink } from "../CstmLink/CstmLink";
+import { CstmLink } from "../../../../shared/ui/CstmLink/CstmLink";
 
 export const Navbar: FC = () => {
     
