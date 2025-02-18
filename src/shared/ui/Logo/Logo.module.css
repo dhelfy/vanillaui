@@ -1,4 +1,5 @@
 .logo {
     color: #fff;
     user-select: none;
+    cursor: pointer;
 }
