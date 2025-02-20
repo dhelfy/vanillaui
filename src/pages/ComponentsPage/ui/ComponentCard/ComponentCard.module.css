@@ -1,0 +1,25 @@
+.componentCard {
+    display: flex;
+    flex-direction: column;
+    width: 175px;
+    border: 0.3px solid #616161;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.componentShowcase {
+    height: 101px;
+    background-color: #090909;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.componentInfo {
+    background-color: #151515;
+    height: 37px;
+    display: flex;
+    align-items: center;
+    padding-left: 8px;
+}
