@@ -1,29 +1,28 @@
-import { FC } from "react"
+import { FC, useEffect, useState } from "react"
 import { ComponentCard } from "../ComponentCard/ComponentCard"
 import styles from "./ComponentsList.module.css"
+import { IComponent } from "../../../../types/types"
+import axios from "axios"
 
 export const ComponentsList: FC = () => {
-    // TODO: Тащить компоненты из бд
-    const components = [
-        {
-            id: 1,
-            title: "Button",
-            image: "https://vw6cxixi2a.ufs.sh/f/jUlU9MtrNjnEWfctxr1MH8jsOk7zZBPCvn5peD0frVt4KmQE"
-        },
-        {
-            id: 2,
-            title: "ButtonV2",
-            image: "https://vw6cxixi2a.ufs.sh/f/jUlU9MtrNjnEWfctxr1MH8jsOk7zZBPCvn5peD0frVt4KmQE"
+    const [components, setComponents] = useState<IComponent[]>([])
+
+    useEffect(() => {
+        const fetchComponents = async () => {
+            const response = await axios.get("http://localhost:3000/components")
+            setComponents(response.data)
         }
-    ]
+
+        fetchComponents()
+    }, [])
 
     return (
         <div className={styles.componentsList}>
             {components.map((component) => (
                 <ComponentCard 
                     key={component.id} 
-                    title={component.title} 
-                    image={component.image} 
+                    title={component.name} 
+                    image={component.link} 
                     id={component.id} 
                 />
             ))}
