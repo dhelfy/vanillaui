@@ -1,0 +1,14 @@
+.navigationBlock {
+    display: flex;
+    gap: 8px;
+}
+
+.navigationBlock * {
+    cursor: pointer;
+    color: #616161;
+    font-weight: 500;
+}
+
+.active {
+    color: #fff;
+}

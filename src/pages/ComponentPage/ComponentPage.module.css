@@ -1,0 +1,24 @@
+.componentPage {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.codeBlock {
+    width: 800px;
+    height: 600px;
+    background-color: #151515;
+    padding: 8px;
+    border-radius: 15px;
+}
+
+.toolPanel {
+    display: flex;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyBtn {
+    cursor: pointer;
+}
