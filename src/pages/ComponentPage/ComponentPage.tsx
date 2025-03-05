@@ -1,10 +1,11 @@
-import axios from "axios";
+import { instance } from "../../API/axiosInstance";
 import styles from "./ComponentPage.module.css"
 import { FC, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { CstmButton } from "../../shared/ui/CstmButton/CstmButton";
 import { CodeNavigation } from "./ui/CodeNavigation/CodeNavigation";
 import copyIcon from "../../assets/icons/copy_icon.svg"
+import { Code } from "./ui/Code/Code";
 
 export const ComponentPage: FC = () => {
     const [component, setComponent] = useState({
@@ -25,7 +26,7 @@ export const ComponentPage: FC = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/components/${params.id}`);
+                const response = await instance.get(`components/${params.id}`);
                 setComponent(response.data);
             } catch (error) {
                 console.log(error)
@@ -50,7 +51,11 @@ export const ComponentPage: FC = () => {
                     <img src={copyIcon} className={styles.copyBtn}/>
                 </div>
 
-                {component.files[active as 'tsx' | 'jsx' | 'css']}
+                <Code 
+                    lang={active}
+                    langs={Object.keys(component.files)}
+                    codeFromProps={component.files[active as 'jsx' | 'tsx' | 'css']}
+                />
             </div>
 
             <CstmButton onClick={onClick}>

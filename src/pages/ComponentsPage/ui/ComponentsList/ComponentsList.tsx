@@ -2,14 +2,14 @@ import { FC, useEffect, useState } from "react"
 import { ComponentCard } from "../ComponentCard/ComponentCard"
 import styles from "./ComponentsList.module.css"
 import { IComponent } from "../../../../types/types"
-import axios from "axios"
+import { instance } from "../../../../API/axiosInstance"
 
 export const ComponentsList: FC = () => {
     const [components, setComponents] = useState<IComponent[]>([])
 
     useEffect(() => {
         const fetchComponents = async () => {
-            const response = await axios.get("http://localhost:3000/components")
+            const response = await instance.get("components")
             setComponents(response.data)
         }
 
