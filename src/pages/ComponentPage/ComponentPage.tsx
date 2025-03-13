@@ -4,8 +4,8 @@ import { FC, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { CstmButton } from "../../shared/ui/CstmButton/CstmButton";
 import { CodeNavigation } from "./ui/CodeNavigation/CodeNavigation";
-import copyIcon from "../../assets/icons/copy_icon.svg"
 import { Code } from "./ui/Code/Code";
+import { CopyButton } from "./ui/CopyButton/CopyButton";
 
 export const ComponentPage: FC = () => {
     const [component, setComponent] = useState({
@@ -38,7 +38,9 @@ export const ComponentPage: FC = () => {
 
     return (
         <div className={styles.componentPage}>
+
             <h1>{component.name}</h1>
+
             <div className={styles.codeBlock}>
                 <div className={styles.toolPanel}>
                     <CodeNavigation 
@@ -48,8 +50,11 @@ export const ComponentPage: FC = () => {
                         }}
                         active={active}
                     />
-                    <img src={copyIcon} className={styles.copyBtn}/>
+
+                    <CopyButton text={component.files[active as 'jsx' | 'tsx' | 'css']}/>
                 </div>
+
+                <hr className={styles.divider}/>
 
                 <Code 
                     lang={active}
