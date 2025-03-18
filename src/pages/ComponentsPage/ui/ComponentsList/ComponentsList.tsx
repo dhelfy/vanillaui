@@ -1,20 +1,17 @@
-import { FC, useEffect, useState } from "react"
+import { FC, useEffect } from "react"
 import { ComponentCard } from "../ComponentCard/ComponentCard"
 import styles from "./ComponentsList.module.css"
-import { IComponent } from "../../../../types/types"
-import { instance } from "../../../../API/axiosInstance"
+import { useDispatch, useSelector } from "react-redux"
+import { selectAllComponents } from "../../../../state/components/componentsSelectors"
+import { fetchComponents } from "../../../../state/components/componentsSlice"
 
 export const ComponentsList: FC = () => {
-    const [components, setComponents] = useState<IComponent[]>([])
+    const dispatch = useDispatch()
+    const components = useSelector(selectAllComponents);
 
-    useEffect(() => {
-        const fetchComponents = async () => {
-            const response = await instance.get("components")
-            setComponents(response.data)
-        }
-
-        fetchComponents()
-    }, [])
+    useEffect(() => {    
+        dispatch(fetchComponents());
+    }, [dispatch])
 
     return (
         <div className={styles.componentsList}>
