@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import { createHighlighter } from "shiki";
+import styles from "./Code.module.css"
 
 interface CodeProps {
   lang: string;
@@ -32,6 +33,10 @@ export const Code: FC<CodeProps> = ({lang, langs, codeFromProps}) => {
   }, [lang, codeFromProps])
 
   return (
-    <div dangerouslySetInnerHTML={{__html: code}}></div>
+    <div 
+      dangerouslySetInnerHTML={{__html: code}}
+      className={styles.code}
+    >
+    </div>
   )
 };
