@@ -3,5 +3,11 @@
 .code pre code span{
     font-family: "JetBrains Mono", monospace;
     white-space: pre-wrap;
-    word-wrap: break-word; 
+    word-wrap: break-word;
+}
+
+.code {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #616161 #151515;
 }
