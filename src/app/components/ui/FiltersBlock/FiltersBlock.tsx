@@ -1,10 +1,10 @@
 'use client'
 
 import { FC, useState } from "react";
-import CstmSelect from "../CstmSelect/CstmSelect"
 import styles from "./FiltersBlock.module.css"
+import CstmSelect from "@/shared/CstmSelect/CstmSelect";
 
-export const FiltersBlock: FC = () => {
+const FiltersBlock: FC = () => {
   const [selectedOption, setSelectedOption] = useState("")
 
   return (
@@ -18,3 +18,5 @@ export const FiltersBlock: FC = () => {
     </div>
   );
 };
+
+export default FiltersBlock
