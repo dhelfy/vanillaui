@@ -3,12 +3,15 @@
 import { FC } from "react";
 import styles from "./Code.module.css"
 import { useSuspenseQuery } from "@tanstack/react-query";
+import { JetBrains_Mono } from 'next/font/google'
 
 interface CodeProps {
   lang: string;
   langs: string[]
   codeFromProps: string;
 }
+
+const jetbrains = JetBrains_Mono({ display: 'swap' })
 
 const Code: FC<CodeProps> = ({ lang, langs, codeFromProps }) => {
   const { data } = useSuspenseQuery({
@@ -26,7 +29,7 @@ const Code: FC<CodeProps> = ({ lang, langs, codeFromProps }) => {
   return (
     <div
       dangerouslySetInnerHTML={{ __html: data }}
-      className={styles.code}
+      className={styles.code + ' ' + jetbrains.className}
     >
     </div>
   )
