@@ -1,0 +1,22 @@
+.mainInfo {
+    margin-top: 128px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mainHeading {
+    max-width: 1060px;
+    font-size: 48px;
+}
+
+.mainDescription {
+    font-size: 32px;
+    max-width: 800px;
+    color: #616161;
+}
+
+.boldText {
+    color: #616161;
+    font-weight: bold;
+}

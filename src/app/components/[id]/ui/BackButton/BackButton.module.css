@@ -1,0 +1,16 @@
+.backButtonWrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    cursor: pointer;
+    user-select: none;
+    width: max-content;
+}
+
+.backButtonWrapper * {
+    color: #616161;
+}
+
+.backButtonWrapper:hover * {
+    color: white;
+}

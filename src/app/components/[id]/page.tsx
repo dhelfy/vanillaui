@@ -18,10 +18,12 @@ export default async function ComponentPage({ params }: { params: Params }) {
 
     return (
         <div className={styles.componentPage}>
-            <h1>{component.name}</h1>
-            <CodeBlock component={component} />
+            <div>
+                <h1>{component.name}</h1>
+                <BackButton />
+            </div>
 
-            <BackButton />
+            <CodeBlock component={component} />
         </div>
     );
 }
