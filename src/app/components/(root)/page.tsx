@@ -11,7 +11,7 @@ export default async function ComponentsPage() {
 
     return (
       <div className={styles.componentsPage}>
-        <FiltersBlock />
+        {/* <FiltersBlock /> */}
         <ComponentsList
           components={components}
         />
