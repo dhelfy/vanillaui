@@ -12,7 +12,7 @@ interface ComponentCardProps {
 
 export const ComponentCard: FC<ComponentCardProps> = ({ title, image, id }) => {
     const onClick = () => {
-        redirect(`/components/${id}`)
+        redirect(`/components/${title}/${id}`)
     }
 
     return (

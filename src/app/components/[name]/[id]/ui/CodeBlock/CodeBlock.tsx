@@ -3,7 +3,7 @@
 import { FC, useState } from "react"
 import styles from "../../styles.module.css"
 import { CopyButton } from "../CopyButton/CopyButton"
-import { CodeNavigation } from "@/app/components/[id]/ui/CodeNavigation/CodeNavigation";
+import { CodeNavigation } from "@/app/components/[name]/[id]/ui/CodeNavigation/CodeNavigation";
 import Code from "../Code/Code";
 
 interface CodeBlockProps {
