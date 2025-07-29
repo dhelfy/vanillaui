@@ -1,3 +1,4 @@
+import Modal from "@/shared/Modal/Modal";
 import styles from "./page.module.css"
 
 const Home = () => {
