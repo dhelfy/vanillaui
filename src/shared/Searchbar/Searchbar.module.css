@@ -20,3 +20,23 @@
 .searchBar:hover {
     background-color: #1a1a1a;
 }
+
+.noResults {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #616161;
+}
+
+.result {
+    background: #151515;
+    padding: 8px;
+    border-radius: 8px;
+    border: #616161 1px dashed;
+    text-decoration: none;
+}
