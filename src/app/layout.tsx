@@ -3,6 +3,7 @@ import { Geist } from "next/font/google"
 import "./globals.css";
 import Header from "../shared/Header/Header";
 import Providers from "./providers";
+import Footer from "@/shared/Footer/Footer";
 
 const geist = Geist({
   subsets: ['latin']
@@ -21,6 +22,7 @@ export default function RootLayout({ children, }: Readonly<{ children: React.Rea
           <Header />
           <Providers>{children}</Providers>
         </main>
+        <Footer />
       </body>
     </html>
   );

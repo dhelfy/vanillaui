@@ -10,13 +10,6 @@ const Navbar: FC = () => {
             <Searchbar />
 
             <Link 
-                href="/faq"
-                className={styles.link}
-            >
-                FAQ
-            </Link>
-
-            <Link 
                 href="/components"                
                 className={styles.link}
             >

@@ -24,4 +24,5 @@ h2 {
 .mainContainer {
   max-width: 1600px;
   margin: auto;
+  height: calc(100vh);
 }
