@@ -1,4 +1,4 @@
-.mainInfo {
+.mainBlock {
     margin-top: 128px;
     display: flex;
     flex-direction: column;
@@ -6,8 +6,18 @@
 }
 
 .mainHeading {
-    max-width: 1060px;
+    max-width: 800px;
+    font-size: 48px; 
+}
+
+.heading {
     font-size: 48px;
+    margin-bottom: 16px;
+    margin-top: 148px;
+}
+
+.subHeading {
+    font-size: 32px;
 }
 
 .mainDescription {
@@ -19,4 +29,27 @@
 .boldText {
     color: #616161;
     font-weight: bold;
+}
+
+.libBtn {
+    width: fit-content;
+}
+
+.advantagesList {
+    display: flex;
+    justify-content: space-between;
+}
+
+.listItem {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+.desc {
+    color: #616161;
+}
+
+.helpBlock {
+    max-width: 800px;
 }

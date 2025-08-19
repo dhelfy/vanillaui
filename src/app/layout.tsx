@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children, }: Readonly<{ children: React.ReactNode; }>) {
   return (
     <html lang="en" className={geist.className}>
-      <body>
-        <main className="mainContainer">
-          <Header />
+      <body>   
+        <Header />
+        <main>
           <Providers>{children}</Providers>
         </main>
-        <Footer />
+        <Footer />   
       </body>
     </html>
   );
