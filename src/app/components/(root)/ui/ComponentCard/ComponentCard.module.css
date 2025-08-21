@@ -1,7 +1,9 @@
 .componentCard {
     display: flex;
     flex-direction: column;
-    width: 175px;
+    flex: 1;
+    width: auto;
+    min-width: 175px;
     border: 0.3px solid #616161;
     border-radius: 8px;
     overflow: hidden;

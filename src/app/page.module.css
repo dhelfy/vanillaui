@@ -44,6 +44,7 @@
 .advantagesList {
     display: flex;
     justify-content: space-between;
+    gap: 16px;
 }
 
 .listItem {
@@ -59,4 +60,23 @@
 
 .helpBlock {
     max-width: 800px;
+}
+
+@media (max-width: 1500px) {
+    .componentsImg {
+        width: 423px;
+        height: 381px;
+    }
+}
+
+@media (max-width: 1255px) {
+    .componentsImg {
+        display: none;
+    }
+}
+
+@media (max-width: 500px) {
+    .advantagesList {
+        flex-direction: column;
+    }
 }

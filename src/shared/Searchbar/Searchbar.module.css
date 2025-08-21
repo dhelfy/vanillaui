@@ -13,12 +13,15 @@
     outline: none;
     border: none;
     background-color: #151515;
-    color: #616161;
     transition: 0.2s;
 }
 
 .searchBar:hover {
     background-color: #1a1a1a;
+}
+
+.searchBarHint {
+    color: #616161;
 }
 
 .noResults {
@@ -39,4 +42,17 @@
     border-radius: 8px;
     border: #616161 1px dashed;
     text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .searchBarHint {
+        display: none;
+    }
+
+    .searchBar {
+        background-color: transparent;
+        width: max-content;
+        padding: 0;
+        min-width: 0;
+    }
 }

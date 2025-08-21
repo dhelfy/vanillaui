@@ -48,8 +48,7 @@ const Searchbar: FC<props> = () => {
                     height={16}
                     alt=""
                 />
-
-                Search...
+                <p className={styles.searchBarHint}>Search...</p>
             </button>
 
             <Modal isOpen={isOpen} onClose={() => {
