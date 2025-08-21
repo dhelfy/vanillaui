@@ -11,7 +11,10 @@ interface CodeProps {
   codeFromProps: string;
 }
 
-const jetbrains = JetBrains_Mono({ display: 'swap' })
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"], 
+  display: 'swap' 
+})
 
 const Code: FC<CodeProps> = ({ lang, langs, codeFromProps }) => {
   const { data } = useSuspenseQuery({
