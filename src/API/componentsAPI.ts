@@ -32,18 +32,3 @@ export const fetchComponentByID = async (id: string, name: string) => {
     throw new Error("Failed to load information")
   }
 }
-
-export async function getCodeHtml(code: string, lang: string, langs: string[]) {
-  const highlighter = await createHighlighter({
-    themes: ['vesper'],
-    langs,
-  })
-
-  return highlighter.codeToHtml(code, {
-    lang,
-    theme: 'vesper',
-    colorReplacements: {
-      '#101010': '#151515',
-    },
-  })
-}
